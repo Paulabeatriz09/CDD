@@ -1,19 +1,22 @@
 class Conta:
 
-    def __init__(self, numero, nome, tipo, saldo=0, status=False):
+    def __init__(self, numero, nome, tipo,limite=0,saldo=0,novo=0,status=False):
         self.numero = numero
-        self.saldo = saldo
         self.nome = nome
         self.tipo = tipo
-        self.status = status
+        self.saldo = saldo
+        self.limite= limite
+        self.status= status
+        self.novo=novo
 
 
     def ativar(self):
-        if self.status == True:
+        if self.status == False:
             print("A conta está ativa")
+            self.status=True
         else:
-            self.status = True
-            print("A conta foi ativada com sucesso")
+            print("COnta não está ativada pois esta inativa")
+
 
 
     def inativa(self):
@@ -24,17 +27,26 @@ class Conta:
     def depositar(self, valor):
         if self.status == True:
             self.saldo = self.saldo + valor
-            print(self.nome,"deposito realizado")
+            print(self.nome,"deposito realizado",self.saldo)
 
 
     def sacar(self, saque):
-        if saque > self.saldo and self.status == True:
-            print("Saldo insuficiente")
+        if saque > (self.saldo+self.limite) and self.status == True:
+            print("Saque realizado")
         else:
-            self.saldo=self.saldo-saque
-            print("Realizando saque")
+            print()
 
 
     def verificar_saldo(self):
-        print(self.saldo)
+        print(self.saldo,self.limite)
+
+
+    def ativar1(self,valor):
+        if self.status==True:
+            self.limite=self.limite+valor
+
+    def nov(self):
+        if self.status==True:
+            self.nov=self.limite+self.saldo
+            print(self.nov)
 

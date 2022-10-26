@@ -24,15 +24,17 @@ class Conta:
     def depositar(self, valor):
         if self.status == True:
             self.saldo = self.saldo + valor
-            print(f'{self.nome} deposito realizado')
+            print(self.nome,"deposito realizado")
 
 
     def sacar(self, saque):
         if saque > self.saldo and self.status == True:
             print("Saldo insuficiente")
         else:
+            self.saldo=self.saldo-saque
             print("Realizando saque")
 
 
     def verificar_saldo(self):
         print(self.saldo)
+

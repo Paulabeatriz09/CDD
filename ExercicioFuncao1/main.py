@@ -1,4 +1,4 @@
-from biblioteca import Conta
+from ExercicioFuncao1.biblioteca import Conta
 
 c1=Conta(123,"Paula","Poupança")
 c1.ativar()

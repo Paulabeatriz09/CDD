@@ -1,5 +1,4 @@
 
-
 class Formas():
     def __init__(self,area,perimetro):
         self.area=area
@@ -9,6 +8,6 @@ class Formas():
 class Triangulo():
     def _init_(self,altura):
         super().__init__(area,perimetro)
-
+#triangulo equilatero
     def calculaPerimetro(self):
         print()

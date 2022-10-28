@@ -1,11 +1,7 @@
 from ast import In
-from biblioteca import Ingresso,Vip
+from biblioteca import Vip
 
-
-i1=Ingresso(100)
-i1.impprimevalor(100)
-
-v1=Vip(20)
-v1.valorad(10)
-
+v1=Vip(20,2)
+v1.valorad()
+v1.impprimevalor()
 

@@ -7,16 +7,17 @@
 # incluído)
 
 class Ingresso():
-    def __init__(self,valor):
+    def __init__(self,valor,adicional):
+        self.adicional=adicional
         self.valor=valor
 
-    def impprimevalor(self,valor):
+    def impprimevalor(self):
         print(self.valor," R$")
 
 class Vip(Ingresso):
-    def _init_(self,adicional):
-        super()._init_(valor)
-        self.adiconal=adicional
+    def _init_(self,valor,adicional):
+        super().__init__(valor,adicional)
 
-    def valorad(self,adicional):
-        print(self.valor+adicional," R$")
+
+    def valorad(self):
+        print(self.valor*self.adicional," R$")
